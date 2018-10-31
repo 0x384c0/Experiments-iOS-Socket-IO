@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FB79E7B67B4B4203EC5A5D /* Pods_Experiments_Socket_IO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6585AC8D36354AA497C11629 /* Pods_Experiments_Socket_IO.framework */; };
 		49D070DE2108874D00335935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D070DD2108874D00335935 /* AppDelegate.swift */; };
 		49D070E02108874D00335935 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D070DF2108874D00335935 /* ViewController.swift */; };
 		49D070E32108874D00335935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D070E12108874D00335935 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		49D070E42108875100335935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49D070E72108875100335935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49D070E92108875100335935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EBA612704D6B1775E5AE80E /* Pods-Experiments-Socket-IO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Experiments-Socket-IO.release.xcconfig"; path = "Pods/Target Support Files/Pods-Experiments-Socket-IO/Pods-Experiments-Socket-IO.release.xcconfig"; sourceTree = "<group>"; };
+		6585AC8D36354AA497C11629 /* Pods_Experiments_Socket_IO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Experiments_Socket_IO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E54EDBC4C589FF7F2F3984C6 /* Pods-Experiments-Socket-IO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Experiments-Socket-IO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Experiments-Socket-IO/Pods-Experiments-Socket-IO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FB79E7B67B4B4203EC5A5D /* Pods_Experiments_Socket_IO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				49D070DC2108874C00335935 /* Experiments-Socket-IO */,
 				49D070DB2108874C00335935 /* Products */,
+				9AEF00EBEFBD7DD9F5349606 /* Pods */,
+				6E038F8BBF2CAB59F5CEAADF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "Experiments-Socket-IO";
 			sourceTree = "<group>";
 		};
+		6E038F8BBF2CAB59F5CEAADF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6585AC8D36354AA497C11629 /* Pods_Experiments_Socket_IO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AEF00EBEFBD7DD9F5349606 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E54EDBC4C589FF7F2F3984C6 /* Pods-Experiments-Socket-IO.debug.xcconfig */,
+				5EBA612704D6B1775E5AE80E /* Pods-Experiments-Socket-IO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49D070EC2108875100335935 /* Build configuration list for PBXNativeTarget "Experiments-Socket-IO" */;
 			buildPhases = (
+				9B01253F079BC4353296AB0B /* [CP] Check Pods Manifest.lock */,
 				49D070D62108874C00335935 /* Sources */,
 				49D070D72108874C00335935 /* Frameworks */,
 				49D070D82108874C00335935 /* Resources */,
+				910DE92562A28CFA1DCE205A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		910DE92562A28CFA1DCE205A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Experiments-Socket-IO/Pods-Experiments-Socket-IO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Experiments-Socket-IO/Pods-Experiments-Socket-IO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B01253F079BC4353296AB0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Experiments-Socket-IO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49D070D62108874C00335935 /* Sources */ = {
@@ -278,15 +345,13 @@
 		};
 		49D070ED2108875100335935 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E54EDBC4C589FF7F2F3984C6 /* Pods-Experiments-Socket-IO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AW8RFH6CD4;
 				INFOPLIST_FILE = "Experiments-Socket-IO/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.0x384c0.Experiments-Socket-IO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +361,13 @@
 		};
 		49D070EE2108875100335935 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EBA612704D6B1775E5AE80E /* Pods-Experiments-Socket-IO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AW8RFH6CD4;
 				INFOPLIST_FILE = "Experiments-Socket-IO/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.0x384c0.Experiments-Socket-IO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
